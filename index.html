@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vocaloid Essentials - Curator's Choice Recommendations</title>
+  <meta name="description" content="Discover handpicked Vocaloid songs recommended by our curator. Filter by composer or creative theme like composition techniques and cheer-up tracks.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header & Hero Section -->
+  <header class="hero-section" id="hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="hero-container">
+      <nav class="nav-bar">
+        <div class="logo">
+          <span class="logo-accent">VOCALOID</span> ESSENTIALS
+        </div>
+        <div class="nav-links">
+          <a href="#showcase" class="nav-link">Picks Showcase</a>
+          <a href="#about" class="nav-link">What is Vocaloid?</a>
+          <a href="https://github.com" target="_blank" class="nav-link github-link">
+            <svg class="icon-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+              <path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.579.688.481C19.137 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
+      </nav>
+
+      <div class="hero-content">
+        <h1 class="hero-title animate-title">
+          My Handpicked <span class="glow-text text-miku">Vocaloid Guide</span>
+        </h1>
+        <p class="hero-subtitle animate-subtitle">
+          Welcome to my personal archive of Vocaloid masterpieces. From songs that will lift your spirits when feeling down, to tracks with mind-blowing music theory and technical wizardry.
+        </p>
+        <div class="hero-actions">
+          <a href="#showcase" class="btn-primary">Browse My Picks</a>
+          <a href="#about" class="btn-secondary">What is this?</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Showcase & Filter Section -->
+  <main class="showcase-section" id="showcase">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title">The Curator's Catalog</h2>
+        <p class="section-desc">Explore tracks categorized by creative songwriting techniques, themes, and emotional vibes.</p>
+      </div>
+
+      <!-- Filter Controls Grid -->
+      <div class="filter-controls-container">
+        <!-- Search Bar -->
+        <div class="search-box">
+          <div class="search-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.602 10.602z"/>
+            </svg>
+          </div>
+          <input type="text" id="search-input" placeholder="Search by song name, Japanese title, vocal, or notes...">
+          <button id="clear-search" class="clear-search-btn" title="Clear Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Filter Rows -->
+        <div class="filter-group">
+          <span class="filter-label">Producer</span>
+          <div class="filter-buttons" id="producer-filters">
+            <button class="filter-btn active" data-producer="all">All</button>
+            <button class="filter-btn prod-deco" data-producer="deco27">DECO*27</button>
+            <button class="filter-btn prod-ryo" data-producer="ryo">ryo (supercell)</button>
+            <button class="filter-btn prod-pino" data-producer="pinocchio">PinocchioP</button>
+            <button class="filter-btn prod-neru" data-producer="neru">Neru</button>
+            <button class="filter-btn prod-kz" data-producer="kz">kz (livetune)</button>
+            <button class="filter-btn prod-others" data-producer="others">Other Producers</button>
+          </div>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Curator's Themes</span>
+          <div class="filter-buttons" id="category-filters">
+            <button class="filter-btn active" data-category="all">All Themes</button>
+            <button class="filter-btn theme-cheer" data-category="Cheer Up">Cheer Up (Low Moods)</button>
+            <button class="filter-btn theme-tech" data-category="Insane Tech">Insane Tech (Composition)</button>
+            <button class="filter-btn theme-dark" data-category="Dark & Deep">Dark & Deep (Heavy)</button>
+            <button class="filter-btn theme-story" data-category="Masterpiece Story">Storytelling</button>
+            <button class="filter-btn theme-classic" data-category="Legendary">Legendary Classics</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Grid of Songs -->
+      <div id="song-grid" class="song-grid-container">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </main>
+
+  <!-- Detailed Preview Modal -->
+  <div id="song-modal" class="modal-overlay">
+    <div class="modal-container">
+      <button id="modal-close" class="modal-close-btn" title="Close Modal">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+      <div id="modal-detail-content" class="modal-content">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- About Vocaloid Section -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text animate-on-scroll">
+          <span class="section-tag">An Introduction</span>
+          <h2 class="section-title">What is Vocaloid?</h2>
+          <p>
+            Developed by Yamaha, <strong>Vocaloid</strong> is a singing synthesizer voice software that enables composers and musicians to write songs using virtual singer personas. Users input melody and lyrics, and the engine synthesizes vocals using recorded voice libraries from real actors.
+          </p>
+          <p>
+            What began as simple musical software quickly transformed into a global, user-driven cultural phenomenon. Unlike traditional music where a single record label controls characters, Vocaloid songs are created independently by thousands of individual producers (often called "P").
+          </p>
+          <p>
+            From cyber-pop concerts to orchestral arrangements and viral TikTok tracks, Vocaloid represents a collaborative universe where the boundary between virtual characters and human creators is beautifully blurred.
+          </p>
+        </div>
+        <div class="about-stats-container">
+          <div class="stat-card">
+            <h3>100k+</h3>
+            <p>Original Songs Released</p>
+          </div>
+          <div class="stat-card">
+            <h3>15+</h3>
+            <p>Years of History</p>
+          </div>
+          <div class="stat-card">
+            <h3>Millions</h3>
+            <p>of Global Creators & Fans</p>
+          </div>
+          <div class="stat-card">
+            <h3>3D Live</h3>
+            <p>Concerts Worldwide</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="logo">
+            <span class="logo-accent">VOCALOID</span> ESSENTIALS
+          </div>
+          <p>Curating the digital voice generation for English audiences.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Navigation</h4>
+          <a href="#hero">Home</a>
+          <a href="#showcase">Music Catalog</a>
+          <a href="#about">About Vocaloid</a>
+        </div>
+        <div class="footer-info">
+          <h4>Credits</h4>
+          <p>Created as a public guide. Songs and videos belong to their respective producers and artists.</p>
+          <p>&copy; 2026 Vocaloid Essentials. Built for the global synthesizer community.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
